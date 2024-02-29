@@ -2,13 +2,16 @@ package com.book.example;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class Book implements InitializingBean, DisposableBean{
-
    private Integer id;
    private String name;
+
 
    public Book() {
       super();
@@ -17,6 +20,7 @@ public class Book implements InitializingBean, DisposableBean{
    public Integer getId() {
       return id;
    }
+
    public void setId(Integer id) {
       this.id = id;
    }
